@@ -14,6 +14,7 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def show
+    recipe = Recipe.find(params[:id])
     if recipe
       render json: recipe
     else
